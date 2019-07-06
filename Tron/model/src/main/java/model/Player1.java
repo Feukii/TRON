@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 public class Player1
 {
 	
-	public int posX = 500;
+	public int posX = 10;
 	public int posY =10;
 	public Image image1; 
 	 

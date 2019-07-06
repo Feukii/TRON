@@ -9,23 +9,35 @@ import model.BlueRect;
 import model.Player1;
 
 
-public class KeyPlayer1 implements KeyListener
+          public class KeyPlayer1 implements KeyListener
   {
 
 	
 	static  ArrayList<BlueRect> bluewall = new ArrayList<BlueRect>();
 	static Player1 joueur1 = new Player1();
 	Collision col = new Collision();
-	 
-	         
-	 
+	static boolean up = false;
+	static boolean down = false;
+	static boolean right= false;
+	static boolean left = false;
+
+	
+	
+	
+
 	public void keyPressed(KeyEvent e) {
 		col.Edge();
 		
 		// TODO Auto-generated method stub
 		
 		if (e.getKeyCode()==KeyEvent.VK_UP ) {
-			bluewall.add(new BlueRect(joueur1.getPosX(), joueur1.getPosY()));
+		  
+			 up = true;
+			 down = false;
+			right= false;
+			 left = false;
+
+			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
 			joueur1.setPosY(joueur1.getPosY()-1);
 			System.out.println(joueur1.getPosY());
 			//for(int i=0; i< bluewall.size(); i++)				
@@ -33,30 +45,56 @@ public class KeyPlayer1 implements KeyListener
 
 		}
 		
-		if (e.getKeyCode()==KeyEvent.VK_DOWN) {
-			bluewall.add(new BlueRect(joueur1.getPosX(), joueur1.getPosY()));
+		else if (e.getKeyCode()==KeyEvent.VK_DOWN) {
+			up = false;
+			 down = true;
+			right= false;
+			 left = false;
+
+			
+			
+			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
 			joueur1.setPosY(joueur1.getPosY()+1);
 		       System.out.println(joueur1.getPosX() + " " + joueur1.getPosY());
 
 			
 		}
 		
-		if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
-			bluewall.add(new BlueRect(joueur1.getPosX(), joueur1.getPosY()));
+		else if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
+			up = false;
+			 down = false;
+			right= true;
+			 left = false;
+
+			 
+			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
 			joueur1.setPosX(joueur1.getPosX()+1);
 		       System.out.println(joueur1.getPosX() + " " + joueur1.getPosY());
 
 		}
 		
-		if (e.getKeyCode()==KeyEvent.VK_LEFT) {
-			bluewall.add(new BlueRect(joueur1.getPosX(), joueur1.getPosY()));
+		else if (e.getKeyCode()==KeyEvent.VK_LEFT) {
+			up = false;
+			 down = false;
+			right= false;
+			 left = true;
+
+			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
 			joueur1.setPosX(joueur1.getPosX()-1);
 		       System.out.println(joueur1.getPosX() + " " + joueur1.getPosY());
 
 		}
+		
+	
+		else 
+		{
+			up = false;
+			 down = false;
+			right= false;
+			 left = false;
+			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
 		}
-		
-		
+		}
 		
 	
 
@@ -69,7 +107,12 @@ public class KeyPlayer1 implements KeyListener
 		// TODO Auto-generated method stub
 		
 	}
-    
+
+
+
+
+
+	
 	
 	
 	
