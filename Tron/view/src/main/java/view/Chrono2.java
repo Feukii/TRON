@@ -9,19 +9,13 @@ public class Chrono2 implements Runnable {
 	int y;
 	int x;
 	
-	private final int PAUSE = 1;
+	
 	
 	public void run() {
 		
-for(;;) {
+do {
 	
-	/* y = KeyPlayer1.joueur1.getPosY();
-	y++;
-
-
-
 	
-	KeyPlayer1.joueur1.setPosY(y);*/
 	
 	if(KeyPlayer2.down== false )
 	{
@@ -80,9 +74,7 @@ for(;;) {
 		 down= false;
 		 left = false;
 		 right = true;
-		/*KeyPlayer1.RIGHT=false;
-		KeyPlayer1.UP= false;
-		KeyPlayer1.DOWN= false;*/
+	
 			 x = KeyPlayer2.joueur2.getPosX();
 			x--;
 			
@@ -105,7 +97,7 @@ for(;;) {
 				Main.decor.missile1.setX(220);
 			}*/
 			
-	}		
+	}	while(true);	
 
 }
 }

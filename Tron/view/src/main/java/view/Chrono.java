@@ -16,8 +16,7 @@ public class Chrono implements Runnable {
 	int y;
 	int x;
 	
-	private final int PAUSE = 1;
-	
+
 	public void run() {
 		
 do {
@@ -29,7 +28,7 @@ do {
 
 	
 	KeyPlayer1.joueur1.setPosY(y);*/
-	bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
+	//bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
 	
 	if(KeyPlayer1.down== false )
 	{

@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
@@ -8,6 +7,9 @@ import java.util.ArrayList;
 import model.BlueRect;
 import model.Player1;
 
+/*
+ * 
+ */
 
           public class KeyPlayer1 implements KeyListener
   {
@@ -20,16 +22,21 @@ import model.Player1;
 	static boolean down = false;
 	static boolean right= false;
 	static boolean left = false;
-
+	protected static boolean play = true;
 	
 	
 	
 
 	public void keyPressed(KeyEvent e) {
-		col.Edge();
+		col.Edge1();
+		col.Crash();
+		col.crashPlayer1();
+		col.Edge2();
+		col.owncrashPlayer1();
+		col.owncrashPlayer2();
 		
 		// TODO Auto-generated method stub
-		
+		if(play == true) {
 		if (e.getKeyCode()==KeyEvent.VK_UP ) {
 		  
 			 up = true;
@@ -37,54 +44,55 @@ import model.Player1;
 			right= false;
 			 left = false;
 
-			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
+			bluewall.add(new BlueRect(joueur1.getPosX()+10, joueur1.getPosY()+10));
 			joueur1.setPosY(joueur1.getPosY()-1);
 			System.out.println(joueur1.getPosY());
 			//for(int i=0; i< bluewall.size(); i++)				
 		   //    System.out.println(joueur1.getPosX() + " " + joueur1.getPosY());
 
 		}
-		
-		else if (e.getKeyCode()==KeyEvent.VK_DOWN) {
+		}
+		if(play == true) {
+		 if (e.getKeyCode()==KeyEvent.VK_DOWN) {
 			up = false;
 			 down = true;
 			right= false;
 			 left = false;
-
-			
-			
-			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
+			bluewall.add(new BlueRect(joueur1.getPosX()-10, joueur1.getPosY()-10));
 			joueur1.setPosY(joueur1.getPosY()+1);
 		       System.out.println(joueur1.getPosX() + " " + joueur1.getPosY());
 
-			
+		 }
 		}
-		
-		else if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
+		 
+		if(play == true) {
+	         if (e.getKeyCode()==KeyEvent.VK_RIGHT) {
 			up = false;
 			 down = false;
 			right= true;
 			 left = false;
 
 			 
-			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
+			bluewall.add(new BlueRect(joueur1.getPosX()-10, joueur1.getPosY()-10));
 			joueur1.setPosX(joueur1.getPosX()+1);
 		       System.out.println(joueur1.getPosX() + " " + joueur1.getPosY());
 
 		}
+		}
 		
-		else if (e.getKeyCode()==KeyEvent.VK_LEFT) {
+		if(play == true) {
+		 if (e.getKeyCode()==KeyEvent.VK_LEFT) {
 			up = false;
 			 down = false;
 			right= false;
 			 left = true;
 
-			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
+			bluewall.add(new BlueRect(joueur1.getPosX()+10, joueur1.getPosY()+10));
 			joueur1.setPosX(joueur1.getPosX()-1);
 		       System.out.println(joueur1.getPosX() + " " + joueur1.getPosY());
 
 		}
-		
+		}
 	
 		else 
 		{
@@ -92,7 +100,7 @@ import model.Player1;
 			 down = false;
 			right= false;
 			 left = false;
-			bluewall.add(new BlueRect(joueur1.getPosX()+2, joueur1.getPosY()+2));
+			bluewall.add(new BlueRect(joueur1.getPosX()+5, joueur1.getPosY()+5));
 		}
 		}
 		
@@ -107,7 +115,6 @@ import model.Player1;
 		// TODO Auto-generated method stub
 		
 	}
-
 
 
 

@@ -1,6 +1,4 @@
 package view;
-
-import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
@@ -12,6 +10,9 @@ import model.Player2;
           public class KeyPlayer2 implements KeyListener
   {
 
+        	  
+       
+        	   
 	
 	static  ArrayList<OrangeRect> orangewall = new ArrayList<OrangeRect>();
 	static Player2 joueur2 = new Player2();
@@ -20,77 +21,80 @@ import model.Player2;
 	static boolean down = false;
 	static boolean right= false;
 	static boolean left = false;
+	protected static boolean play2 = true;
+	
 
 	
 	
 	
 
 	public void keyPressed(KeyEvent e) {
-		col.Edge();
-		
+		col.Edge1();
+		col.Crash();
+		col.crashPlayer1();
+		col.Edge2();
+		col.owncrashPlayer1();
+		col.owncrashPlayer2();
 		// TODO Auto-generated method stub
-		
+		if(play2 == true) {
 		if (e.getKeyCode()==KeyEvent.VK_Z) {
-		  
-			
 			 up = true;
 			 down = false;
 			right= false;
 			 left = false;
-
-			orangewall.add(new OrangeRect(joueur2.getPosX()+2, joueur2.getPosY()+2));
+			orangewall.add(new OrangeRect(joueur2.getPosX()+10, joueur2.getPosY()+10));
 			joueur2.setPosY(joueur2.getPosY()-1);
 			System.out.println(joueur2.getPosY());
-			//for(int i=0; i< bluewall.size(); i++)				
-		   //    System.out.println(joueur1.getPosX() + " " + joueur1.getPosY());
+		}
 
 		}
 		
-		else if (e.getKeyCode()==KeyEvent.VK_S) {
+		if(play2 == true) {		
+         if (e.getKeyCode()==KeyEvent.VK_S) {
 			up = false;
 			 down = true;
 			right= false;
 			 left = false;
 			
-			orangewall.add(new OrangeRect(joueur2.getPosX()+2, joueur2.getPosY()+2));
+			orangewall.add(new OrangeRect(joueur2.getPosX()-10, joueur2.getPosY()-10));
 			joueur2.setPosY(joueur2.getPosY()+1);
-		       System.out.println(joueur2.getPosX() + " " + joueur2.getPosY());
-
-			
+         }	
 		}
 		
-		else if (e.getKeyCode()==KeyEvent.VK_D) {
+		if(play2 == true) {
+		 if (e.getKeyCode()==KeyEvent.VK_D) {
 			up = false;
 			 down = false;
 			right= true;
 			 left = false;
-
-			 
-			orangewall.add(new OrangeRect(joueur2.getPosX()+2, joueur2.getPosY()+2));
+			orangewall.add(new OrangeRect(joueur2.getPosX()-10, joueur2.getPosY()-10));
 			joueur2.setPosX(joueur2.getPosX()+1);
 		       System.out.println(joueur2.getPosX() + " " + joueur2.getPosY());
 
 		}
-		
-		else if (e.getKeyCode()==KeyEvent.VK_Q) {
+		}
+		if(play2 == true) {
+		 if (e.getKeyCode()==KeyEvent.VK_Q) {
 			up = false;
 			 down = false;
 			right= false;
 			 left = true;
 
-			orangewall.add(new OrangeRect(joueur2.getPosX()+2, joueur2.getPosY()+2));
+			orangewall.add(new OrangeRect(joueur2.getPosX()+10, joueur2.getPosY()+10));
 			joueur2.setPosX(joueur2.getPosX()-1);
 		       System.out.println(joueur2.getPosX() + " " + joueur2.getPosY());
 
 		}
+		}
 		
-		/*else 
+		else 
 		{
-			up = true;
+			up = false;
 			 down = false;
-			right= true;
-			 left = true;
-		}*/
+			right= false;
+			 left = false;
+			orangewall.add(new OrangeRect(joueur2.getPosX()+5, joueur2.getPosY()+5));
+		}
 		}
 		
 	
