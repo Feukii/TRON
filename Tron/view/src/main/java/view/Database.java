@@ -10,11 +10,11 @@ import java.sql.SQLException;
 import contract.DataConnexion;
 
 /**
- * @author TOUSSI Manoel
+ * @author FEUKENG
  *
  */
 public class Database implements DataConnexion{
-	private String URL="jdbc:mysql://localhost/tron_rattrapage?autoReconnect=true&useSSL=false";
+	private String URL="jdbc:mysql://localhost/score?autoReconnect=true&useSSL=false";
 	private String LOGIN="root";
 	private String PASSWORD="";
 	private java.sql.Connection connection;

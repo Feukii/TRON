@@ -1,15 +1,22 @@
+/*
+ * 
+ */
 package main;
 import view.Frame;
 
 public class Main {
 	
 	 
-	
-	
+	/**
+	 * @author FEUKENG
+	 */
+@SuppressWarnings("unused")
+private static Frame frame;
+
 public static void main(String[] args) {
 	
 		
-	 Frame  frame = new Frame();
+	 frame = new Frame();
 	
 	     
 	}

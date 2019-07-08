@@ -5,6 +5,17 @@ public class OrangeRect {
 	public int x;
 	public int y;
 	
+	
+	/**
+	 * 
+	 * @param x
+	 * @param y
+	 */
+	
+	/**
+	 * 
+	 * @author FEUKENG
+	 */
 
 	public OrangeRect(int x, int y)
 	{

@@ -5,7 +5,15 @@ public class BlueRect {
 	public int x;
 	public int y;
 	
-	
+	/**
+	 * 
+	 * @param x
+	 * @param y
+	 */
+	/**
+	 * 
+	 *@author FEUKENG
+	 */
 
 	public BlueRect(int x, int y)
 	{

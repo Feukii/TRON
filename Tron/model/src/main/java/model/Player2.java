@@ -12,6 +12,10 @@ public class Player2
 	public int posY = 300;
 	 public Image image;
 	 
+	 /**
+	  * @author FEUKENG
+	  */
+	 
 	 
 	 public Player2()
 	 {

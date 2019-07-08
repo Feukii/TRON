@@ -11,6 +11,9 @@ public class Player1
 	public int posY =10;
 	public Image image1; 
 	 
+	/**
+	 * @author FEUKENG
+	 */
 	 
 	
 public Player1 ()

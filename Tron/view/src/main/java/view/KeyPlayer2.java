@@ -10,7 +10,9 @@ import model.Player2;
           public class KeyPlayer2 implements KeyListener
   {
 
-        	  
+        	  /**
+        		 * @author FEUKENG
+        		 */  
        
         	   
 	

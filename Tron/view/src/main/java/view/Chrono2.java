@@ -9,7 +9,9 @@ public class Chrono2 implements Runnable {
 	int y;
 	int x;
 	
-	
+	/**
+	 * @author FEUKENG
+	 */
 	
 	public void run() {
 		

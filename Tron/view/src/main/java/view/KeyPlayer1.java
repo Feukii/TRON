@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package view;
 
 import java.awt.event.KeyEvent;
@@ -7,14 +10,14 @@ import java.util.ArrayList;
 import model.BlueRect;
 import model.Player1;
 
-/*
- * 
- */
+
 
           public class KeyPlayer1 implements KeyListener
   {
 
-	
+        	  /**
+        		 * @author FEUKENG
+        		 */
 	static  ArrayList<BlueRect> bluewall = new ArrayList<BlueRect>();
 	static Player1 joueur1 = new Player1();
 	Collision col = new Collision();

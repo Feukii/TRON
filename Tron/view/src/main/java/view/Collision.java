@@ -5,7 +5,9 @@ import contract.ObjetJeu;
 public class Collision implements ObjetJeu{
 	
 	
-	
+	/**
+	 * @author FEUKENG
+	 */
 	/*public boolean crash= false;
 	public boolean crashPlayer1=false;
 	public boolean crashPlayer2=false;

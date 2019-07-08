@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package view;
 
 import javax.swing.JFrame;
@@ -6,7 +9,7 @@ import javax.swing.JFrame;
 public class Frame extends JFrame
 {
 	/**
-	 * 
+	 * @author FEUKENG
 	 */
 	private static final long serialVersionUID = 1L;
 	public static int width=600;

@@ -2,11 +2,14 @@ package view;
 
 import javax.swing.JOptionPane;
 
-import model.Database;
+
 import model.Gestion;
 
 public class Manage {
 	
+	/**
+	 * @author FEUKENG
+	 */
 	static boolean jouer = true;
 	static String win;
 	static long temps_début= System.currentTimeMillis();

@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package model;
 
 import java.io.File;
@@ -11,7 +14,11 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-
+/**
+ * 
+ * @author FEUKENG
+ *
+ */
 public class Animation {    
     
     public static void Play(String sonFile) { 
