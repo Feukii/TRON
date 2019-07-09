@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package model;
 
 import org.junit.runner.RunWith;
@@ -8,5 +11,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ BlueRectTest.class, GestionTest.class, OrangeRectTest.class, Player1Test.class,
 		Player2Test.class })
 public class AllTests {
+	/**
+	 * 	FEUKENG
+	 */
 
 }

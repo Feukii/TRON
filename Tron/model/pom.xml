@@ -7,4 +7,15 @@
   </parent>
   <artifactId>model</artifactId>
   <name>model</name>
+ 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+    	<groupId>fr.exia</groupId>
+    	<artifactId>contract</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>
